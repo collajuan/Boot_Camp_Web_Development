@@ -1,0 +1,13 @@
+#div1{
+    float: right;
+    background-color: aqua;
+    height: 100px;
+    width: 50%;
+}
+
+#div2{
+    float: left;
+    background-color: rgb(38, 0, 255);
+    height: 100px;
+    width: 50%;
+}
