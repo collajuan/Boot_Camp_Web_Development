@@ -3,3 +3,37 @@
     
 
 }
+
+ul {
+    list-style: none;
+    list-style-type: ;
+}
+
+h3, #parrafo{
+    color: green;
+
+}
+
+.remarcado {
+    color: yellow;
+}
+
+a {
+    color: orange;
+}
+
+/* pseudoclase hover; pasar por encima con el raton */
+a:hover {
+    background-color: green;
+    color: white;
+    
+}
+
+#parrafo_azul {
+    color: blue;
+}
+
+#parrafo_azul:hover {
+    background-color: black;
+    color: white;
+}

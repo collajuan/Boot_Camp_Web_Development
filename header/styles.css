@@ -1,0 +1,24 @@
+/* selector universal o reset*/
+* {
+    margin: 0;
+    /* no afecta el ancho del paddin y de los border a los elementos */
+    box-sizing: border-box;
+}
+
+img {
+    background-color: gray;
+    position: absolute;
+}
+
+header {
+    position: relative;    
+    border: 1px red solid;
+    height: 170px;
+}
+
+nav {
+    position: absolute;
+    right: 30px;   
+    top: 40px; 
+}
+
