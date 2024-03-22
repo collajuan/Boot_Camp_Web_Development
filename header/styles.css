@@ -5,30 +5,40 @@
     box-sizing: border-box;
 }
 
-body  {
-}
-
-img {
+#titulo {
     background-color: gray;
     position: relative;
-    margin: 10px 10px;
-    border-radius: 10%;
+    border-radius: 10%; 
+    width: 100px;
 }
 
 header {
-    position: relative;    
+    position: relative;     
     border: 1px red solid;
     background-color: chartreuse;
+    padding: 10px;
     
 }
 
 nav {
-    position: absolute;
-    right: 30px;   
-    top: 60px; 
-    border: 2px green solid;
+    /* Le quita que ocupe todo el bloque  y */
+    /* le hace perder su dimension!!! */
+        /* display: inline; */
+
+    /* Asi no pierde sus dimensiones */
+        display: inline-block;
     background-color: rgb(4, 177, 4);
+    
+    position: absolute;
+    right: 10px ;
+    top: 50px;
+    border: 2px green solid;
     padding: 5px;
+}
+
+.link {
+    margin: 2px;
+    padding: 2px;
 }
 
 .link:hover {
@@ -37,7 +47,17 @@ nav {
     border-radius: 20%;
 }
 
-.link {
-    margin: 2px;
+#titulo:hover {
+    background-color: rgb(92, 92, 92);
+}
+
+main {
+    background-color: gray;
     padding: 5px;
+}
+
+img {
+    border-radius: 10%; 
+    width: 100px;
+    height: 100px;
 }
