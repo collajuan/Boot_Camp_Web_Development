@@ -46,6 +46,11 @@ nav {
     background-color: rgb(1, 57, 1);
     color:white;
     border-radius: 20%;
+    
+}
+
+img:hover{
+    padding: 2px;
 }
 
 #titulo:hover {
