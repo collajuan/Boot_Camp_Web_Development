@@ -13,7 +13,8 @@
 }
 
 header {
-    position: relative;     
+     
+      
     border: 1px red solid;
     background-color: chartreuse;
     padding: 10px;
@@ -29,7 +30,7 @@ nav {
         display: inline-block;
     background-color: rgb(4, 177, 4);
     
-    position: absolute;
+    position: fixed;
     right: 10px ;
     top: 50px;
     border: 2px green solid;
