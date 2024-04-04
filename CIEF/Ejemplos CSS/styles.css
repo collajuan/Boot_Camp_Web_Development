@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    /* no afecta el ancho del paddin y de los border a los elementos */
+    box-sizing: border-box;
+}
+
 body {
     background-color: blueviolet;
 }
