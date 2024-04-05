@@ -6,11 +6,22 @@
 
 body {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;   
+    background-color: rgb(170, 120, 216); 
 }
 
 header {
+    background-color: rgb(108, 60, 153);
     border: 1px solid red;
+    padding: 5px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+#divHeader {
+    background-color: blueviolet;
+    border: 1px solid black;
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -49,16 +60,18 @@ header a:hover {
 }
 
 #divmain {
-    display: flex;
+    display: flex;    
 }
 
 #left {
     border: 1px solid green;
     margin: 4px;
-    width: auto;    
+    background-color: rgb(97, 60, 132);
+    padding: 10px;
 }
 
 #left ul{
+    /* padding: 0; */
 }
 
 main {
@@ -66,7 +79,15 @@ main {
     padding: 10px;      
     /* hay que darle tambien un hight del 100% al html, body*/
     align-self: stretch;
+    /* flex-shrink: 3; */
     margin: 5px;
+    background-color: rgb(120, 34, 201);
+}
+
+main img {
+    float: left;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 footer {
