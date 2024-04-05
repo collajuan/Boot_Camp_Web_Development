@@ -2,6 +2,8 @@
     margin: 0;
     /* no afecta el ancho del paddin y de los border a los elementos */
     box-sizing: border-box;
+    border-radius: 5px;
+
 }
 
 body {
@@ -14,6 +16,7 @@ header {
     background-color: rgb(108, 60, 153);
     border: 1px solid red;
     padding: 5px;
+        
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
@@ -28,13 +31,16 @@ header {
     align-items: center;
 }
 
-html, body  {
+html, body {
     height: 100%;
 }
 
 
 nav {
-    display: inline
+    display: inline;
+    position: fixed;
+    /* top: 50; */
+    right: 10px;
 }
 
 
@@ -67,21 +73,25 @@ header a:hover {
     border: 1px solid green;
     margin: 4px;
     background-color: rgb(97, 60, 132);
-    padding: 10px;
+    padding: 5px;
 }
 
 #left ul{
-    /* padding: 0; */
+    padding: 15px;
 }
 
 main {
     border: 1px solid blue;
-    padding: 10px;      
-    /* hay que darle tambien un hight del 100% al html, body*/
-    align-self: stretch;
-    /* flex-shrink: 3; */
+    padding: 10px;                 
     margin: 5px;
     background-color: rgb(120, 34, 201);
+}
+
+#divEnMain {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start; 
+
 }
 
 main img {
