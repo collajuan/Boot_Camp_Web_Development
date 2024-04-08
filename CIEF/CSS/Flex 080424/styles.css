@@ -1,6 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: rgb(250, 172, 77);
+
 }
 
 header {
@@ -13,7 +15,7 @@ header {
     border-radius: 5px;
     position: fixed;
     width: 98%;
-    background-color: aqua;
+    background-color: rgb(242, 199, 146);
     opacity: 80%;    
 }
 
@@ -23,11 +25,19 @@ header img {
 
 
 nav ul {
-    margin: 30%;
+    margin-top: 30%;
 }
 
 header nav ul li{
     display: inline;
+    margin-right: 4px;
+}
+
+a:hover {
+    background: gray;
+    color: white;
+    border-radius: 3px;
+    padding: 2px;
 }
 
 .main {
@@ -41,6 +51,8 @@ aside {
     border: 2px solid black;
     padding: 5px;
     border-radius: 5px;
+    background-color: bisque;
+
 }
 
 .bloque {
