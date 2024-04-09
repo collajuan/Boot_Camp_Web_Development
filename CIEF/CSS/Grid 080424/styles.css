@@ -41,6 +41,7 @@ header {
 nav {
     background-color: aqua;
     grid-area: menu;
+    margin-left: 5px;
 }
 
 main {
@@ -53,9 +54,31 @@ main {
     justify-content: space-around;
 }
 
+img {
+    border-radius: 5px;
+}
+
+#sectionmain {
+    display: flex;
+    border: 1px solid black;
+    height: 400px;
+    background-color: blueviolet;
+    margin-top: 10px;
+}
+
+
+
+#sectionmain p {
+    background-color: aquamarine;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 2px;
+}
+
 aside {
     background-color: gray;
     grid-area: aside;
+    margin-right: 5px;
 }
 
 footer {

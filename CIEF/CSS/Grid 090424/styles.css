@@ -30,6 +30,8 @@ main{
     grid-row: 2/5;
 }
 
+
+
 aside{
     background-color: green;
     grid-column: 5/6;
