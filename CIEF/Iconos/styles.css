@@ -1,0 +1,37 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    border: 1px black solid;
+
+}
+
+main {
+    flex-grow: 1;
+    border: 1px black solid;
+}
+
+
+
+.fa-globe{
+    color: red;
+    font-size: 20rem;
+}
+
+.bi-whatsapp{
+    font-size: 5rem;
+    background-color: aqua;
+}
+
+
+footer {
+    border: 1px black solid;
+
+}
