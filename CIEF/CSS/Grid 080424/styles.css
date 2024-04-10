@@ -10,7 +10,7 @@
     column-gap: 5px;
     row-gap: 5px;
     grid-template-columns: 10% 10% auto auto auto 15%;
-    padding-top: 80px;
+    padding-top: 80px;    
 }
 
 h1{
