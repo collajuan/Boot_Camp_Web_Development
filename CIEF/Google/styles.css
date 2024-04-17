@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #474747;
+}
+
+/* **************** */
+/* estilos generales */
+/* **************** */
+
+
+li {
+    display: inline;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: #474747; 
+    margin: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* **************** */
+/* Cabecera */
+/* **************** */
+
+header {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;    
+}
+
+header nav:first-child {
+    font-size: 14px;
+}
+
+header nav:last-child {
+    font-size: 13px;    
+}
+
+header nav:last-child li {
+    vertical-align: middle;
+}
+
+header button {
+    cursor: pointer;
+    background-color: #1a73e8;
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    padding: 9px 23px;
+}
+
+header button:hover {
+    box-shadow: 1px 1px red;
+}
+
+/* **************** */
+/* Main */
+/* **************** */
+main {
+ border: 1px solid green;
+}
+
+main > div {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
