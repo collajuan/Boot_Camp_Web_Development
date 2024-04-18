@@ -6,6 +6,8 @@
 
 /* **** Main **** */
 
+
+
 .container {
     border: 1px solid black;
     width: 80%;
@@ -22,11 +24,37 @@
     /* transition-property: */
 }
 
-.caja:hover {
+.caja2 {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    transition-delay: 1s;
+    transition-duration: 3s;
+    transition-timing-function:ease;
+    /* transition-property: */
+}
+
+.caja3 {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    transition-delay: 1s;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+    /* transition-property: */
+}
+
+
+h1:hover ~main div { 
+    transform: translate(150px, 100px); 
+    /* transform: rotate(20deg); */
     width: 300px;
+    height: 100px;
+    background-color: aqua;
 }
 
 
 footer { 
+    border: 1px solid black;
 
 }
