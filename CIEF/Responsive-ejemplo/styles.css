@@ -122,13 +122,14 @@ footer {
         display: block;
         width: 100%;
     }
-    #h1_responsive {
-        display: block;
-    }
-
+    /* cambio el titulo */
     #h1_normal {
         display: none;
     }
+    #h1_responsive {
+        display: block;
+    }
+    
 }
 
 /* *** Se muestra menu con hover *** */
