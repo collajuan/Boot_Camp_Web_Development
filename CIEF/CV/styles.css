@@ -1,51 +1,74 @@
+/* Se quita margen por defecto y bloqueo del tamaña de las cajas */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
+/* Para que el container del body llene la pagina + body en flex + container grow 1 */
 html, body  {
     height: 100%;
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    width: 950px;
+    flex-direction: column;    
+    width: 21cm;
 }
 
 /* *** Header *** */
 
 header {
-    background-color: aqua;
-    text-align: right;
+    background-color: blue;
     padding: 10px;
-    padding-right: 30px;
+    margin: 10px;    
     position: fixed;
-    width: 80%;
+    width: 21cm;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+#titulo {
+    display: inline-block;
+    
 }
 
 /* *** Main *** */
 
 .container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-grow: 1;
-    margin-top: 150px;
-    /* position: relative; */
+    margin: 15px;   
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
 }
 
 aside {
+    /* display: none; */
     border: 1px solid blue;
-    float: left;
-    position: fixed;
+    /* float: left; */
+    /* position: fixed;  */
     height: 100%;
     top: 5px;
-    background-color: aquamarine;
-    width: 20%;    
+    background-color: rgb(57, 57, 251);
+    width: 30%;    
     padding: 5px; 
     text-align: center;
     border-radius: 5px;
 }
 
-aside img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;    
+
+aside .sobre-mi,aside h4 {
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 aside ul {
@@ -54,12 +77,34 @@ aside ul {
     text-align: left;
 }
 
-main {
-    width: 70%;
-    border:1px solid black;
-    /* alinear a la derecha */
+aside hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+main {
+    width: 70%;
+    border-radius: 5px;
+    background-color: rgb(103, 103, 243);
+    display: flex;
+    flex-direction: column;   
+    
+    /* alinear a la derecha */     
+}
+
+.tarjeta {
+    margin: 10px;
+    
+}
+
+
+.tarjeta h5 {
+    margin: 5px;
+}
+
+.tarjeta p {
+    margin: 4px;
+}
 
 /* *** Footer *** */
 footer {
