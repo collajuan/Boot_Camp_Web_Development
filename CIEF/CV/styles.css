@@ -44,8 +44,10 @@ header img {
 .container {
     /* border: 1px solid black; */
     flex-grow: 1;
-    margin: 15px;   
-    margin-top: 180px;
+    margin: 180px 0px 10px 15px;
+    /* margin: 15px; 
+    margin-right: 0;  
+    margin-top: 180px; */
     display: flex;
     justify-content: space-between;
     background-color: beige;
@@ -108,9 +110,21 @@ main {
 
 /* *** Footer *** */
 footer {
-    border: 1px solid black;
-    margin-top: 5px;
     text-align: center ;
-    /* height: 20px; */
-
+    margin-left: 10px;
+    width: 21cm;
+    padding: 5px;
+    background-color: blue;
 }
+
+/* *** Responsive *** */
+/* Menor a 820px */
+/* 1-Header
+    poner ancho a 100%
+    reducir imagen y titulo
+2-container
+    ocultar aside - visto solo con menu hamburgusa
+    main al 100% */
+
+/* *** efectos *** */
+/* Aparecer aside desde las izuierda */
