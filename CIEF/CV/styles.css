@@ -35,29 +35,21 @@ header img {
 }
 
 #titulo {
-    display: inline-block;
-    
+    display: inline-block;    
 }
 
 /* *** Main *** */
 
 .container {
-    /* border: 1px solid black; */
     flex-grow: 1;
     margin: 180px 0px 10px 15px;
-    /* margin: 15px; 
-    margin-right: 0;  
-    margin-top: 180px; */
     display: flex;
     justify-content: space-between;
-    background-color: beige;
+    background-color: rgb(199, 32, 65);
 }
 
 aside {
-    /* display: none; */
-    border: 1px solid blue;
-    /* float: left; */
-    /* position: fixed;  */
+    border: 1px solid blue;   
     height: 100%;
     top: 5px;
     background-color: rgb(57, 57, 251);
@@ -87,16 +79,11 @@ aside hr {
 main {
     width: 70%;
     border-radius: 5px;
-    background-color: rgb(103, 103, 243);
-    display: flex;
-    flex-direction: column;   
-    
-    /* alinear a la derecha */     
+    background-color: rgb(103, 103, 243);       
 }
 
 .tarjeta {
-    margin: 10px;
-    
+    margin: 10px;    
 }
 
 
@@ -125,6 +112,29 @@ footer {
 2-container
     ocultar aside - visto solo con menu hamburgusa
     main al 100% */
+
+
+    /* *** Responsive media Query*** */
+
+@media screen and (max-width: 820px) {
+    aside {
+        display: none;
+    }
+    header,main,.tarjeta {
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 90px;
+        width: 100%;
+    }
+    
+    header img {
+        display: none;
+    }
+
+
+}
 
 /* *** efectos *** */
 /* Aparecer aside desde las izuierda */
