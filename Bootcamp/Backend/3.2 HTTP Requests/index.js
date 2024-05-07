@@ -12,7 +12,7 @@ app.get("/about", (req, res) => {
 })
 
 app.get("/contact", (req, res) => {
-    res.send("<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laudantium corporis provident voluptatem illum nihil quos dolorum minima asperiores obcaecati, incidunt numquam cumque nostrum impedit odio illo veritatis veniam? A!</p>")
+    res.send("<p>Lorelklkñkñkñkllklkm ipsum dolor sit amet consectetur adipisicing elit. Ad laudantium corporis provident voluptatem illum nihil quos dolorum minima asperiores obcaecati, incidunt numquam cumque nostrum impedit odio illo veritatis veniam? A!</p>")
 })
 
 //Activo el servidor (mi pc) para que escuche en el puerto port
