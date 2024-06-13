@@ -1,11 +1,26 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-const Result = () => {
+    // hago el destructuring ya en la funcion**
+const Result = ({ value }) => {
+    // console.log(props)
+    //***Destructuring props *** */
+    //const {value} = props;
     return (
         <div className="result">
-            <span>0</span>
+            {value}
         </div>
     )
+}
+
+//** */ SE VALIDA el tipo de variable que le paso contra el esperado
+Result.propTypes = {
+    //value debe ser string y debe existir
+    value: PropTypes.string.isRequired
+}
+//Se pone valor por defecto
+Result.defaultProps = {
+    value: "0"
 }
 
 export default Result
