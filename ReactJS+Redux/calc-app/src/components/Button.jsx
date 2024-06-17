@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+//***** */ IMPORTAR archivos CSS. QUeda disponible para todos los componentes---GLOBAL
+import "./Button.css"
+
 const Button = ({ type, text, clickHandler }) => (
   <button className={type} onClick={() => clickHandler(text)}>
     <span>{text}</span>
