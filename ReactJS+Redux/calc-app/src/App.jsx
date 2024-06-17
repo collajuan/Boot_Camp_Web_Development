@@ -1,6 +1,7 @@
 import React from "react"
 import Result from "./components/Result"
 import Button from "./components/Button"
+
 //***** */ IMPORTAR archivos CSS. QUeda disponible para todos los componentes---GLOBAL
 import './App.css'
 
