@@ -1,24 +1,21 @@
 import React from "react";
-import Button from "./components/Button";
+// import Button from "./components/Buttoon/Button";
 import Functions from "./components/Functions";
 import MathOperations from "./components/MathOperations";
+import Numbers from "./components/Numbers";
 import Result from "./components/Result";
 
 //***** */ IMPORTAR archivos CSS. QUeda disponible para todos los componentes---GLOBAL
 import "./App.css";
 
 const App = () => {
-  const clickHandlerFunction = (text) => {
-    console.log("en app.jsx", text);
-  };
-
   return (
     <main className="react-calculator">
       <Result value={"0"} />
-      <Button text="1" clickHandler={clickHandlerFunction} />
-    
-
-
+      <Numbers
+        onClickNumber={(number) => 
+            console.log("Click en number", number)}
+      />
 
       <Functions
         onContentClear={() => console.log("Content Clear")}
