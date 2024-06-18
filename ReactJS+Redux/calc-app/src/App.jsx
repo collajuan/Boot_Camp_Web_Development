@@ -11,17 +11,16 @@ import "./App.css";
 const App = () => {
   return (
     <main className="react-calculator">
-      <Result value={"0"} />
+      <Result value={undefined} />
       <Numbers
-        onClickNumber={(number) => 
-            console.log("Click en number", number)}
+        onClickNumber={(number) => {
+          console.log("Click en number", number);
+        }}
       />
-
       <Functions
         onContentClear={() => console.log("Content Clear")}
         onDelete={() => console.log("onDelete")}
       />
-
       <section className="math-operations">
         <MathOperations
           onClickOperation={(operation) => console.log("Operation:", operation)}
