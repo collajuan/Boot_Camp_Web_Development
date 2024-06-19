@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { number } from "prop-types";
+import PropTypes from "prop-types";
 import Button from "./Buttoon/Button";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];

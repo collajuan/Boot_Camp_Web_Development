@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Button from "./components/Buttoon/Button";
 import Functions from "./components/Functions";
 import MathOperations from "./components/MathOperations";
@@ -9,12 +9,16 @@ import Result from "./components/Result";
 import "./App.css";
 
 const App = () => {
+  // Array Destructuring
+  const [stack, setStack] = useState("");
+
   return (
     <main className="react-calculator">
-      <Result value={undefined} />
+      <Result value={stack} />
       <Numbers
         onClickNumber={(number) => {
           console.log("Click en number", number);
+          setStack(`${stack}${number}`);
         }}
       />
       <Functions
