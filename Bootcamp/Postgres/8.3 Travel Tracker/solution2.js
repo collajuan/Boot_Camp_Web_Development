@@ -9,7 +9,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "world",
-  password: "123456",
+  password: "Teclado_23",
   port: 5432,
 });
 db.connect();
@@ -19,11 +19,11 @@ app.use(express.static("public"));
 
 async function checkVisisted() {
   const result = await db.query("SELECT country_code FROM visited_countries");
-
   let countries = [];
   result.rows.forEach((country) => {
     countries.push(country.country_code);
   });
+  console.log(result.rows);
   return countries;
 }
 
