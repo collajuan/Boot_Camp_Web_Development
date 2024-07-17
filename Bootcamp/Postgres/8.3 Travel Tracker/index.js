@@ -47,8 +47,8 @@ app.post("/add", async (req, res) => {
   //Se busca el código de pais con el nombre ingresado por el usuario
   try {
     const result = await db.query(
-      "SELECT country_code FROM countries WHERE country_name = $1",
-      [input]
+      "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%';",
+      [input.toLowerCase()]
     );
     console.log(result.rows);
     //Si existe el código, se guarda en tabla de visitados
