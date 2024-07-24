@@ -1,17 +1,18 @@
-
 //Agrega evento click a todos los elementos con clase .drum
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", event => {
         playAudio(event.target.innerHTML)
+        buttonAnimation(event.target.innerHTML)
     })
 }
-//
-document.addEventListener('keypress', event => {
+
+document.addEventListener('keydown', event => {
     //console.log(event.key);
     playAudio(event.key)
+    buttonAnimation(event.key)
 })
 
-function playAudio(key){
+function playAudio(key) {
     switch (key) {
         case 'w':
             var audio = new Audio('./sounds/crash.mp3')
@@ -43,4 +44,11 @@ function playAudio(key){
             break;
         default: console.log(key);
     }
+}
+
+function buttonAnimation (key) {
+    document.querySelector("." + key).classList.add("pressed")
+    setTimeout(function () {
+        document.querySelector("." + key).classList.remove("pressed")
+    },100)
 }
