@@ -1,24 +1,23 @@
-import express from "express";
+import express from 'express'
 
-const app = express();
-const port = 3000;
 
+const app = express()
+const port = 3000
 
 app.get("/", (req, res) => {
-    const today = new Date();
-    const day = today.getDay();
-    //console.log(day);
-    let type = "a weekday";
-    let adv = "it`s time to work hard";
+    const today = new Date()
+    let day = today.getDay()
+    let type = (day === 0 || day === 6) ? 'the weekend' : 'a weekday'
+    let adv = (day === 0 || day === 6) ? "it`s time to have some fun" : "it`s time to work hard"
 
-    if (day === 0 || day === 6){
-        type = "the weekend";
-        adv = "it`s time to have some fun";
-    }
-    //devuelvo el ejs con un objeto que tiene dos propiedades. Estas las puedo usar como variables dentro del ejs
-    res.render("index.ejs", { dayType: type , advice:  adv});
-});
+    res.render("index.ejs", {
+        dayType: type,
+        advice: adv
+    })
+})
+
+
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}.`);
-});
+    console.log(`Server running on port ${port}`);
+})
