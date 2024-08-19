@@ -2,7 +2,8 @@
 //Make sure you have installed all the dependencies with "npm i".
 //The password is ILoveProgramming
 import express from 'express'
-import bodyParser from 'body-parser'
+import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser'
 // Las siguientes tres lineas resuelven la ubicacion relativa de los archivos
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -11,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express()
 const port = 3000
 const password = 'ILoveProgramming'
-
+//Se puede usar tambien directamente express sin bodyParser
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get("/", (req, res) => {
@@ -24,7 +25,7 @@ app.post("/check" , (req, res) => {
     if(req.body.password === password) {
         res.sendFile(__dirname + "/public/secret.html");
     } else {
-       res.redirect("back") 
+       res.redirect("/") 
     }
 })
 
