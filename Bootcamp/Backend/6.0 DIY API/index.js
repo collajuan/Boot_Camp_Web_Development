@@ -63,7 +63,15 @@ app.patch('/jokes/:id', (req, res) => {
   res.json(jokes[jokeIndex])
 })
 //7. DELETE Specific joke
-
+app.delete('/jokes/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const jokeIndex = jokes.findIndex(joke => joke.id === id)
+  const halfBeforeTheUnwantedElement = jokes.slice(0, jokeIndex)
+  const halfAfterTheUnwantedElement = jokes.slice(jokeIndex + 1);
+  jokes = halfBeforeTheUnwantedElement.concat(halfAfterTheUnwantedElement)
+  // console.log(jokes);  
+  res.json('OK')
+})
 //8. DELETE All jokes
 
 app.listen(port, () => {
