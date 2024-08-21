@@ -28,6 +28,15 @@ app.get('/filter', (req, res) => {
 
 
 //4. POST a new joke
+app.post('/jokes', (req, res) => {
+  console.log(req.body);
+  jokes.push({
+    id: jokes.length+1,
+    jokeText: req.body.text,
+    jokeType: req.body.type
+  })
+  res.json(jokes[jokes.length-1])
+})
 
 //5. PUT a joke
 
