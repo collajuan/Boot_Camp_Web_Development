@@ -66,11 +66,15 @@ app.patch('/jokes/:id', (req, res) => {
 app.delete('/jokes/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const jokeIndex = jokes.findIndex(joke => joke.id === id)
-  const halfBeforeTheUnwantedElement = jokes.slice(0, jokeIndex)
-  const halfAfterTheUnwantedElement = jokes.slice(jokeIndex + 1);
-  jokes = halfBeforeTheUnwantedElement.concat(halfAfterTheUnwantedElement)
+  if (jokeIndex > -1) {
+    jokes.splice(jokeIndex, 1)
+    res.sendStatus(200)
+  } else {
+    res
+    .status(400)
+    .json({error: `Joke with ID: ${id} not found. No jokes were deleted`})
+  }
   // console.log(jokes);  
-  res.json('OK')
 })
 //8. DELETE All jokes
 
