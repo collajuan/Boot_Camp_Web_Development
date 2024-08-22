@@ -21,7 +21,7 @@ app.get('/jokes/:id', (req, res) => {
 
 //3. GET a jokes by filtering on the joke type
 app.get('/filter', (req, res) => {
-  console.log(req.query);
+  console.log(req);
   const filterJokes = jokes.filter(joke => joke.jokeType === req.query.type)
   res.json(filterJokes)
 })
@@ -48,7 +48,7 @@ app.put('/jokes/:id', (req, res) => {
   res.json(jokes[jokeIndex])
 })
 
-//6. PATCH a joke
+//TODO.6. PATCH a joke
 app.patch('/jokes/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const jokeIndex = jokes.findIndex(joke => joke.id === id)
@@ -62,7 +62,7 @@ app.patch('/jokes/:id', (req, res) => {
   }
   res.json(jokes[jokeIndex])
 })
-//7. DELETE Specific joke
+//TODO.7. DELETE Specific joke
 app.delete('/jokes/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const jokeIndex = jokes.findIndex(joke => joke.id === id)
@@ -76,7 +76,21 @@ app.delete('/jokes/:id', (req, res) => {
   }
   // console.log(jokes);  
 })
-//8. DELETE All jokes
+//TODO.8 DELETE All jokes
+app.delete('/all', (req, res) => { 
+  console.log(req.query);
+  console.log(jokes.length);
+  if (req.query.key === masterKey) {
+    jokes = []
+    res.sendStatus(200)
+  } else {
+    res
+    .status(400)
+    .json({error: 'Error de clave'})
+  }
+  console.log(jokes.length);
+  
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
